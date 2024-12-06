@@ -28,6 +28,5 @@ const VideoModal = ({ isOpen, videoUrl, onClose }) => {
     );
   };
   
-  // Haz que VideoModal esté disponible globalmente
   window.VideoModal = VideoModal;
   

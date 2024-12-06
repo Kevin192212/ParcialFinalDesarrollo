@@ -22,7 +22,6 @@ const EstadoCivil = {
     },
     watch: {
       numHijos(newValue) {
-        // Ajustar el tamaño de la lista de hijos
         if (newValue > this.hijos.length) {
           this.hijos = [...this.hijos, ...Array(newValue - this.hijos.length).fill('')];
         } else if (newValue < this.hijos.length) {
@@ -53,7 +52,6 @@ const EstadoCivil = {
     `
   };
   
-  // Aplicación Vue
   new Vue({
     el: '#app',
     data() {
@@ -105,16 +103,16 @@ const EstadoCivil = {
       },
       updateHijos(hijos) {
         this.form.hijos = hijos;
-        this.form.numHijos = hijos.length;  // Actualizar numHijos
+        this.form.numHijos = hijos.length;  
         this.updateSubsidio();
       },
       updateSubsidio() {
         this.showSubsidio =
           this.form.sexo === 'femenino' &&
           this.form.estadoCivil === 'soltero' &&
-          this.form.hijos.length > 0; // Usar .length para contar los hijos
+          this.form.hijos.length > 0; 
   
-        console.log('¿Mostrar subsidio?', this.showSubsidio); // Para verificar la lógica
+        console.log('¿Mostrar subsidio?', this.showSubsidio); 
       }
     },
     components: {
@@ -123,7 +121,6 @@ const EstadoCivil = {
       Subsidio
     },
     created() {
-      // Cargar departamentos desde el archivo JSON
       fetch('./data/departamentos.json')
         .then(response => response.json())
         .then(data => {

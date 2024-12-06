@@ -1,4 +1,4 @@
-// Componente genérico para ítems del menú usando slots
+
 const MenuItem = {
     template: `
       <li>
@@ -9,7 +9,6 @@ const MenuItem = {
     `,
 };
 
-// Componentes específicos para cada ítem del menú
 const MacItem = {
     template: `
       <menu-item>
@@ -91,7 +90,6 @@ const WhereToBuyItem = {
     components: { 'menu-item': MenuItem },
 };
 
-// Crear la aplicación y registrar los componentes
 const app = Vue.createApp({});
 app.component('mac-item', MacItem);
 app.component('ipad-item', IpadItem);

@@ -53,7 +53,6 @@ const VideoGallery = () => {
   );
 };
 
-// Haz que VideoGallery esté disponible globalmente
 window.VideoGallery = VideoGallery;
 
   

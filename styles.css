@@ -17,7 +17,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
+  background-color: rgba(0, 0, 0, 0.8); 
   padding: 10px 0;
   z-index: 999;
 }
@@ -55,12 +55,10 @@ nav a:hover {
   fill: #aaa;
 }
 
-/* Cambiar color de los elementos al hacer scroll */
 nav, .apple-icon a {
   transition: all 0.3s ease;
 }
 
-/* Cambiar el fondo del nav al hacer scroll */
 nav.scrolled {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -120,11 +118,11 @@ nav.scrolled {
       0 0 60px #ffe5b4;  
 }
 
-/* Contenedor principal */
+/* Contenedor principal card*/
 .product-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  grid-gap: 20px; /* Espacio entre las tarjetas */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
   padding: 20px;
   background-color: black;
   justify-items: center;
@@ -147,14 +145,12 @@ nav.scrolled {
   transform: translateY(-5px);
 }
 
-/* Imagen del producto */
 .product-image {
   width: 150px;
   height: auto;
   margin-bottom: 15px;
 }
 
-/* Detalles del producto */
 .product-details .new-badge {
   display: inline-block;
   font-size: 14px;
@@ -174,7 +170,6 @@ nav.scrolled {
   margin-bottom: 15px;
 }
 
-/* Botones */
 .product-buttons {
   display: flex;
   gap: 10px;
@@ -204,4 +199,86 @@ nav.scrolled {
 
 .buy-button:hover {
   background-color: #e0e0e0;
+}
+/* Estilos del Footer */
+footer{
+  background-color: #111;
+}
+.footerContainer{
+  width: 100%;
+  padding: 20px 30px 20px ;
+}
+.socialIcons{
+  display: flex;
+  justify-content: center;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding:  10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 20%;
+}
+.socialIcons a i{
+  font-size: 1.3em;
+  color: black;
+  opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+.footerNav{
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:white;
+  margin: 15px;
+  text-decoration: none;
+  font-size: 1em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerBottom{
+  background-color: #000;
+  padding: 10px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+@media (max-width: 700px){
+  .footerNav ul{
+      flex-direction: column;
+  } 
+  .footerNav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .socialIcons a{
+      padding: 8px;
+      margin: 4px;
+  }
 }
